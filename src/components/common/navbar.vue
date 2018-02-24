@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import Panel from "../core/panel.vue"
+import Panel from "./panel.vue"
 export default {
     components: {
         Panel,
@@ -54,6 +54,7 @@ export default {
     bottom: 0;
     height: 100px;
     margin: 0;
+    z-index: 1000;
     >h4{
       display: none;
     }

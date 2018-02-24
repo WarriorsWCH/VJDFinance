@@ -1,7 +1,7 @@
 <template lang="html">
     <section :class="cname">
         <swiper :options="options" :not-next-tick="options.notNextTick">
-            <swiper-slide v-for="item in items" :key="item.href">
+            <swiper-slide v-for="item in items" :key="item.src">
                 <router-link :to="{ name: item.href}">
                     <img :src="item.src" alt="">
                 </router-link>
@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import 'swiper/dist/css/swiper.css'
 import { swiper, swiperSlide } from "vue-awesome-swiper"
 export default {
     components: {
@@ -23,6 +24,7 @@ export default {
             type: String,
             default: "",
         },
+        // http://www.swiper.com.cn/api/index2.html
         options: {
             type: Object,
             default() {
@@ -45,7 +47,3 @@ export default {
     },
 }
 </script>
-
-<style lang="css">
-  @import "~swiper/dist/css/swiper.css";
-</style>
